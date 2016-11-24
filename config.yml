@@ -1,0 +1,111 @@
+# Configuration for WPDistillery executed by setup.sh
+#
+# Author: Flurin Dürst » https://flurinduerst.ch
+# URL: https://github.com/flurinduerst/WPDistillery
+#
+# For detailed instructions on this file read the config.yml-documentation at
+# https://github.com/flurinduerst/WPDistillery/blob/master/README_CONFIG.md
+#
+# File Version: 1.6.3
+
+
+# INSTALLATION
+#################################################################
+
+# WordPress folder
+wpfolder: public
+
+# WordPress version
+wpversion: latest
+
+# language/timezone
+wplocale: en_US
+timezone: "America/New_York"
+
+# admin user settings
+admin:
+  user: admin
+  password: admin
+  email: mail@domain.tld
+  first_name: ""
+  last_name: ""
+
+# scotch box db access
+db:
+  name: scotchbox
+  user: root
+  pass: root
+  prefix: wp_
+
+# SETTINGS
+#################################################################
+
+wpsettings:
+  url: wpdistillery.dev
+  title: Example Title
+  description: Example Description
+  permalink_structure: "/%postname%/"
+  thumbnail_width: 150
+  thumbnail_height: 150
+  medium_width: 300
+  medium_height: 300
+  large_width: 1024
+  large_height: 1024
+  # use page as frontpage
+  page_on_front: true
+    frontpage_name: Example Front Page
+  # automatic conversion of smilies
+  convert_smilies: false
+
+# THEME
+#################################################################
+
+# theme to install, choose new name in 'rename' or leave empty
+theme:
+  name: WPSeed
+  rename: ""
+  url: "https://github.com/flurinduerst/WPSeed/archive/master.zip"
+
+# PLUGINS
+#################################################################
+
+# plugins to install & activate
+plugins_active:
+  - disable-comments
+  - duplicate-post
+  - enable-media-replace
+  - favicon-by-realfavicongenerator
+  - regenerate-thumbnails
+  - simple-page-ordering
+  - user-switching
+  - google-sitemap-generator
+
+# plugins to install
+plugins_inactive:
+  #development
+  - custom-post-type-ui
+  - search-and-replace
+  - capability-manager-enhanced
+  #administration
+  - adminimize
+  - admin-menu-editor
+  - admin-menu-reorder
+  - wordpress-seo
+  #security/backup
+  - wp-security-audit-log
+  - backwpup
+
+# WPDISTILLERY SETUP
+####################################################################
+# if you don't want the setup to run all tasks, set them to false
+
+setup:
+  wp: true
+  settings: true
+  theme: true
+  plugins: true
+  cleanup: true
+    comment: true
+    posts: true
+    files: true
+    themes: true

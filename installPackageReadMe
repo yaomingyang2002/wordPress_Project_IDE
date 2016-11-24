@@ -1,0 +1,25 @@
+
+This package include scotchbox and wpdistillery files into a wordPressProject folder, so that you can repeatly use this package to setup different wordPressProject (just change the folder name, so you will have an isolated wordpress environment for individual project without infering other project runing in your machine!)
+
+what you need to run this package to set up a WP IDE:
+1. install a oracle virtural machine and vagrant box in your PC .
+2. change the wordPressProject folder name to whatever project name you want and move to where you have installed your vagrant box (usually in C:\Users\username\WordPressProject).
+3. follow the install instruction in the following link (https://scotch.io/bar-talk/announcing-wpdistillery-dead-simple-wordpress-for-scotch-box)
+
+	a. all required files are already in the folder now.
+	b. Start your virtual machine by running vagrant up and access the Scotch Box with vagrant ssh (PUTTY)
+	c. Make sure WP-CLI is up to date(so you will run the latest version of wordpress!): 
+				sudo wp cli update --allow-root  
+	d. Execute the setup.sh: 
+				cd ../../var/www/ && bash setup.sh
+	e. modify your hosts file in the path: 
+				c/window/system32/divers/etc/etc/hosts
+	   just add one line to the hosts file: 
+	   			192.168.33.10  wpdistillery.dev
+	f. now run your browser: 
+					wpdistillery.dev/wp-login.php 
+					(username: admin /password: admin, you can modify these in the config.yml file directly.)
+					
+	e. now your wordpress environment is setup and ready to go just focusing on your wordPress project!
+
+
