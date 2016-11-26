@@ -1,4 +1,5 @@
 
+
 This package include scotchbox and wpdistillery files into a wordPressProject folder, so that you can repeatly use this package to setup different wordPressProject (just change the folder name, so you will have an isolated wordpress environment for individual project without infering other project runing in your machine!)
 
 what you need to run this package to set up a WP IDE:
@@ -20,6 +21,16 @@ what you need to run this package to set up a WP IDE:
 					wpdistillery.dev/wp-login.php 
 					(username: admin /password: admin, you can modify these in the config.yml file directly.)
 					
-	e. now your wordpress environment is setup and ready to go just focusing on your wordPress project!
+	g. now your wordpress environment is setup. 
+	h. Here are 3 Fixes need to do after the basic setup. You need to run http://wpdistillery.net/wp-login.php 
+
+		1) Disable Comments plugins => adjust it to check Pages and Medias, and uncheck ‘Posts’ (otherwise you cannot create comments!)
+
+		2) Theme => The basic theme of WPDistillery is broken, you may install a new one by going to the Apperance section, Add a New Theme. Then, select Tweenty Sixteen, click Install, then click Activate.
+
+		3) Permalinks are broken, and need to be regenerated. Go to Settings => Permalinks, then click 'Save Changes' after switching from Post-title to Numeric, and back to Post-title.
+		 
+	i. now you are ready to go just focusing on your wordPress project!
+
 
 
