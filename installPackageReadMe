@@ -1,6 +1,5 @@
 
-
-This package includes documents needed to quickly (~5min) setup individual WordPress Project Integrated Development Enviroment (IDE) for website development based on Scotch BOX (LAMPP) over Vagrant - Oracle VM. It can be used to create multiple IDEs each for a specific project using latest version (4.6.1) of WordPress Content Management System (CMS) over your VM.
+This package includes documents needed to quickly setup individual WordPress Project Integrated Development Enviroment (IDE) for website development based on Scotch BOX (LAMP) over Vagrant - Oracle VM. It can be used to create multiple IDEs each for a specific project using latest version (4.6.1) of WordPress Content Management System (CMS) over your VM.
 
 This package combine Scotchbox and WPDistillery files into a single folder, so that it can be repeatly used to setup multiple IDEs for those with multi-tasks and work on different wordPressProjects (each time just make a copy of the folder and change the folder name to your project name, so you can setup an isolated wordpress IDE using that copy for an individual project) and  save a lot of time from repeatedly searching files online and figuring out how to install it from beginning again.
 
@@ -22,6 +21,7 @@ What you will need to do with this package to set up a WordPress IDE:
 				cd ../../var/www/ && bash setup.sh
 
 	e. modify hosts file in the path: 
+
 				c/window/system32/drivers/etc/hosts
 	   just add one line to the hosts file: 
 	   			192.168.33.10  wpdistillery.dev
@@ -30,4 +30,16 @@ What you will need to do with this package to set up a WordPress IDE:
 					wpdistillery.dev/wp-login.php 
 					(username: admin /password: admin, these can be changed in the config.yml file directly.)
 					
-	e. now the wordpress environment is up and let one focusing on wordPress project!
+
+	g. now your wordpress environment is setup. 
+	h. Here are 3 Fixes need to do after the basic setup. You need to run http://wpdistillery.net/wp-login.php 
+
+		1) Disable Comments plugins => adjust it to check Pages and Medias, and uncheck ‘Posts’ (otherwise you cannot create comments!)
+
+		2) Theme => The basic theme of WPDistillery is broken, you may install a new one by going to the Apperance section, Add a New Theme. Then, select Tweenty Sixteen, click Install, then click Activate.
+
+		3) Permalinks are broken, and need to be regenerated. Go to Settings => Permalinks, then click 'Save Changes' after switching from Post-title to Numeric, and back to Post-title.
+		 
+	i. now you are ready to go just focusing on your wordPress project!
+
+
