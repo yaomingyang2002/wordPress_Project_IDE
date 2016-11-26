@@ -14,7 +14,7 @@ what you need to run this package to set up a WP IDE:
 	d. Execute the setup.sh: 
 				cd ../../var/www/ && bash setup.sh
 	e. modify your hosts file in the path: 
-				c/window/system32/divers/etc/etc/hosts
+				c/window/system32/drivers/etc/hosts
 	   just add one line to the hosts file: 
 	   			192.168.33.10  wpdistillery.dev
 	f. now run your browser: 
